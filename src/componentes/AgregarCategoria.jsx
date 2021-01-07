@@ -25,7 +25,7 @@ const AgregarCategoria = ({ setCategorias }) => {
 
     return (
         <Fragment>
-            <Search placeholder="Ingresa la categoria que deseas agregar" onChange={guardarCategoria} value={categoria} onSearch={buscar} enterButton></Search>
+            <Search placeholder="Busca los mejores gifs " onChange={guardarCategoria} value={categoria} onSearch={buscar} enterButton></Search>
         </Fragment>
     )
 }
