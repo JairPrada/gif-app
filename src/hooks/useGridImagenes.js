@@ -7,7 +7,7 @@ export const useGridImagenes = (categoria) => {
     })
     useEffect(() => {
         traerImagenes(categoria)
-            .then(() => {
+            .then((gifs) => {
                 setState({
                     data: e,
                     loading: false

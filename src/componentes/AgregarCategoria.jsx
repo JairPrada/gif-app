@@ -11,13 +11,15 @@ const AgregarCategoria = ({ setCategorias }) => {
         if (categoria.trim().length > 2) {
             message.loading("Buscando .....", 1)
                 .then(() => {
-                    message.success("Se realizo la busquedo correctamente", 1)
                     setCategorias(categorias => [categoria, ...categorias]);
+                    message.success("Se realizo la busquedo correctamente", 1)
+                }).catch((e) => {
+                    message.error(e, 1)
                 })
         } else {
             message.loading("Buscando .....", 1)
                 .then(() => {
-                    message.error("La busqueda debe realizarse almenos con 2 caracteres", 1)
+                    message.error("La busqueda debe realizarse almenos con 3 caracteres", 1)
                     setCategoria("");
                 })
         }
@@ -25,7 +27,9 @@ const AgregarCategoria = ({ setCategorias }) => {
 
     return (
         <Fragment>
-            <Search placeholder="Busca los mejores gifs " onChange={guardarCategoria} value={categoria} onSearch={buscar} enterButton></Search>
+            <div className="entrandoIzquierda">
+                <Search placeholder="Busca los mejores gifs " onChange={guardarCategoria} value={categoria} onSearch={buscar} enterButton></Search>
+            </div>
         </Fragment>
     )
 }
