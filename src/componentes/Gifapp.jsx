@@ -7,15 +7,15 @@ const { Content, Footer } = Layout;
 const { Title } = Typography;
 
 const Gifapp = (props) => {
-    const [categorias, setCategorias] = useState([""]);
+    const [categorias, setCategorias] = useState(["Fire"]);
     return (
         <Fragment>
             <Layout id="contenido">
                 <Content style={{ padding: "50px", minHeight: "900px" }}>
-                    <Title level={1} style={{ color: "white" }} className="entrandoDerecha">Giff App</Title>
+                    <Title level={1} style={{ color: "white" ,fontSize:"3rem"}} className="entrandoDerecha">Giff App</Title>
                     <AgregarCategoria setCategorias={setCategorias} />
                     <Divider />
-                    <Breadcrumb className="entrada" style={{ margin: '16px 0', color: "white" }}>
+                    <Breadcrumb className="entrandoDerecha" style={{ margin: '16px 0', color: "white" }}>
                         <Breadcrumb.Item>Inicio</Breadcrumb.Item>
                         <Breadcrumb.Item>Lista</Breadcrumb.Item>
                         <Breadcrumb.Item style={{ color: "#4A748C" }}>Gifs</Breadcrumb.Item>

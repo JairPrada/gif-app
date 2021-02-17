@@ -9,13 +9,8 @@ const AgregarCategoria = ({ setCategorias }) => {
     }
     const buscar = () => {
         if (categoria.trim().length > 2) {
-            message.loading("Buscando .....", 1)
-                .then(() => {
-                    setCategorias(categorias => [categoria, ...categorias]);
-                    message.success("Se realizo la busquedo correctamente", 1)
-                }).catch((e) => {
-                    message.error(e, 1)
-                })
+            setCategorias(categorias => [categoria, ...categorias]);
+            setCategoria("")
         } else {
             message.loading("Buscando .....", 1)
                 .then(() => {
@@ -24,7 +19,6 @@ const AgregarCategoria = ({ setCategorias }) => {
                 })
         }
     }
-
     return (
         <Fragment>
             <div className="entrandoIzquierda">

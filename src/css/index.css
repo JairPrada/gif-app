@@ -9,7 +9,10 @@
     #132d59 80%,
     #132d59 100%
   );
+  -webkit-animation: bg-pan-top 8s both;
+  animation: bg-pan-top 8s both;
 }
+
 .footer {
   background-color: #132d59;
   background-image: linear-gradient(
@@ -36,7 +39,8 @@
   text-align: center;
   transition: 0.5s;
   background-size: 200% auto;
-  border: none;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
   color: white;
   display: block;
 }
@@ -153,34 +157,4 @@
     transform: none;
   }
 }
-
-.entrada {
-  -webkit-animation-name: slideInDown;
-  animation-name: slideInDown;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  }
-  @-webkit-keyframes slideInDown {
-  0% {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  visibility: visible;
-  }
-  100% {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  }
-  }
-  @keyframes slideInDown {
-  0% {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  visibility: visible;
-  }
-  100% {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  }
-  } 
+/*---------------------------Animacion Fondo -------------------------------------*/

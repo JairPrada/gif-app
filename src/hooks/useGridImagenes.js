@@ -9,7 +9,7 @@ export const useGridImagenes = (categoria) => {
         traerImagenes(categoria)
             .then((gifs) => {
                 setState({
-                    data: e,
+                    data: gifs,
                     loading: false
                 })
             })
