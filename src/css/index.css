@@ -72,12 +72,13 @@
   border: 1px solid rgba(0, 0, 0, 0);
   color: white;
   display: block;
+  cursor: pointer;
 }
 .card:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
-  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 /*-----------------------Animaciones------------------------------------------------------*/
