@@ -1,4 +1,4 @@
-import { Card, Divider, Image, Typography } from 'antd';
+import { Divider, Image, Typography } from 'antd';
 
 import React, { Fragment } from 'react';
 
@@ -24,12 +24,12 @@ const GridImagenes = ({ categoria = "Maradona", url = "https://ep01.epimg.net/el
                         : data.map((e) => (
                             <div className="masonry-item" key={e.url}>
                                 <Parallax animation={{ x: 0, y: 0 }} style={{ transform: 'translateX(2vw)', margin: '1px auto' }} >
-                                    <Card className="card" cover={
+                                    <div className="card">
                                         <div className="gif-cover">
                                             <Image src={e.url} width="100%" loading={loading} preview={false} />
                                             <div className="gif-caption">{e.titulo}</div>
                                         </div>
-                                    } />
+                                    </div>
                                 </Parallax>
                             </div>
                         ))
