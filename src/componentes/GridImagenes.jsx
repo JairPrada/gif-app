@@ -24,9 +24,12 @@ const GridImagenes = ({ categoria = "Maradona", url = "https://ep01.epimg.net/el
                         : data.map((e) => (
                             <div className="masonry-item" key={e.url}>
                                 <Parallax animation={{ x: 0, y: 0 }} style={{ transform: 'translateX(2vw)', margin: '1px auto' }} >
-                                    <Card className="card" cover={<Image src={e.url} width="100%" loading={loading} />} >
-                                        <Typography.Text style={{ color: "white" }}> {e.titulo}</Typography.Text>
-                                    </Card>
+                                    <Card className="card" cover={
+                                        <div className="gif-cover">
+                                            <Image src={e.url} width="100%" loading={loading} preview={false} />
+                                            <div className="gif-caption">{e.titulo}</div>
+                                        </div>
+                                    } />
                                 </Parallax>
                             </div>
                         ))
