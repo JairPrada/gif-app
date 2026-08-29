@@ -1,3 +1,32 @@
+/*---------------------------Masonry Grid ---------------------------------------*/
+.masonry {
+  column-count: 4;
+  column-gap: 9px;
+}
+.masonry-item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin-bottom: 8px;
+}
+.masonry-item .card {
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+@media (max-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
 #contenido {
   background-color: #132d59;
   background-image: linear-gradient(
